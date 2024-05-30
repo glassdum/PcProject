@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <style>
+        .active {
+            background-color: blue;
+            color: white;
+        }
+        .btn a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .btn button {
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="right">
+        <form action="">
+            <div class="idpw">
+                <input type="text">
+                <input type="password">
+            </div>
+            <div class="name">
+                <input type="text">
+                <input type="text" id="onlyNumber1" value="8자리 생년월일을 입력해 주세요">
+                <input type="text" id="onlyNumber2" value="'-' 없이 숫자만 입력해 주세요">
+                <div class="but_box">
+                    <div>
+                        <button type="button" class="gender" id="maleBtn">남성</button>
+                        <button type="button" class="gender" id="femaleBtn">여성</button>
+                    </div>
+                    <div>
+                        <button type="button" class="nation" id="koreanBtn">내국인</button>
+                        <button type="button" class="nation" id="foreignerBtn">외국인</button>
+                    </div>
+                </div>
+                <select name="tell" id="">
+                    <option value="none">통신사선택</option>
+                    <option value="skt">SKT</option>
+                    <option value="kt">KT</option>
+                    <option value="lg">LG U+</option>
+                    <option value="saveMoney">알뜰폰</option>
+                </select>
+            </div>
+            <div class="btn">
+                <button type="button" class="active"><a href="./login.html">이전</a></button>
+                <button type="button" id="next"><a href="javascript:void(0)">다음</a></button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // 숫자 입력 필드에 숫자만 입력되도록 설정
+            $('#onlyNumber1, #onlyNumber2').on('input', function() {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+
+            // 성별 및 국적 버튼 클릭 시 active 클래스 추가 및 제거
+            $('.gender').click(function() {
+                $('.gender').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $('.nation').click(function() {
+                $('.nation').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            // 다음 버튼 클릭 시 페이지 이동
+            $('#next').click(function() {
+                if ($('#maleBtn').hasClass('active') || $('#femaleBtn').hasClass('active')) {
+                    if ($('#koreanBtn').hasClass('active') || $('#foreignerBtn').hasClass('active')) {
+                        window.location.href = './nextpage.html'; // 다음 페이지 URL 입력
+                    } else {
+                        alert('국적을 선택해 주세요.');
+                    }
+                } else {
+                    alert('성별을 선택해 주세요.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
