@@ -1,18 +1,3 @@
-// $(document).ready(function() {
-//     $('.gender').click(function() {
-//         $('.gender').prop('disabled', false);
-//         $(this).prop('disabled', true);
-//         $(this).siblings().removeClass('active');
-//         $(this).addClass('active');
-//     });
-//     $('.nation').click(function() {
-//         $('.nation').prop('disabled', false);
-//         $(this).prop('disabled', true);
-//         $(this).siblings().removeClass('active');
-//         $(this).addClass('active');
-//     });
-// });
-
 $(document).ready(function() {
     // 숫자 입력 필드에 숫자만 입력되도록 설정
     $('#onlyNumber1, #onlyNumber2').on('input', function() {

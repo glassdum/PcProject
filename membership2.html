@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>회원가입</title>
     <link rel="stylesheet" href="./css/membership2.css">
+    <script src="./script/jquery-3.7.1.min.js"></script>
 </head>
 <body>
     <section>
@@ -32,12 +33,12 @@
                     <input type="text" id="onlyNumber2" value="'-' 없이 숫자만 입력해 주세요">
                     <div class="but_box">
                         <div>
-                            <button class="gender" id="maleBtn">남성</button>
-                            <button class="gender" id="femaleBtn">여성</button>
+                            <button type="button" class="gender" id="maleBtn">남성</button>
+                            <button type="button" class="gender" id="femaleBtn">여성</button>
                         </div>
                         <div>
-                            <button class="nation" id="koreanBtn">내국인</button>
-                            <button class="nation" id="foreignerBtn">외국인</button>
+                            <button type="button" class="nation" id="koreanBtn">내국인</button>
+                            <button type="button" class="nation" id="foreignerBtn">외국인</button>
                         </div>
                     </div>
                     <select name="tell" id="">

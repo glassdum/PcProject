@@ -69,7 +69,33 @@ section .right form .btn button a {
     align-items: center;
 }
 
+section .right form .idpw {
+    margin-bottom: 24px;
+}
 
+section .right form .idpw input[type = text], section .right form .idpw input[type = password] {
+    display: block;
+    width: 500px;
+    height: 45px;
+    text-indent: 12px;
+    font-size: 16px;
+    border: 1.5px solid #222;
+}
+section .right form .idpw input[type = text] {
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+section .right form .idpw input[type = password] {
+    border-radius: 0 0 10px 10px;
+}
+
+section .right form .name input[type = text] {
+    display: block;
+    width: 500px;
+    height: 40px;
+}
+
+section .right form .but_box 
 
 .gender, .nation {
     padding: 10px;
